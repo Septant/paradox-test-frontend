@@ -1,4 +1,4 @@
-import {ChangeDetectionStrategy, ChangeDetectorRef, Component, Inject, OnInit} from '@angular/core';
+import {ChangeDetectionStrategy, Component, Inject, OnInit} from '@angular/core';
 import {TagsManager} from "../../services/tags-manager";
 import {Observable, switchMap} from "rxjs";
 import {Tag} from "../../../models/tags.model";

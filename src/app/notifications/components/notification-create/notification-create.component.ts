@@ -66,7 +66,9 @@ export class NotificationCreateComponent {
           autoClose: true,
           hasCloseButton: true,
         }
-      ).pipe((take(1), takeUntilDestroyed(this.destroyRef))).subscribe();
+      ).pipe(
+        take(1),
+        takeUntilDestroyed(this.destroyRef)).subscribe();
     }
 
   }

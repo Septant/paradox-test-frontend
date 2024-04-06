@@ -1,27 +1,38 @@
 # Frontend
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.10.
+Тестовое задание для Парадох
+Версия Angular: [Angular CLI](https://github.com/angular/angular-cli) version 16.2.10.
 
-## Development server
+### Сторонние ресурсы
+В проекте используются [moment.js](https://momentjs.com/) и [Taiga-ui](https://taiga-ui.dev)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+### Development server
 
-## Code scaffolding
+`ng serve`: Запуск в режиме разработчика. Рабочий порт: `http://localhost:4200/`.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Build
 
-## Build
+`ng build`: Сборка проекта. Артефакты собираются в папке `dist/`. Папку dist необходимо скопировать в `dist` backend под именем `client`
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Running unit tests
+# Модули
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## 1. Теги
 
-## Running end-to-end tests
+Облако тегов, с возможностью добавления, а также редактирования/удаления для неиспользующихся тегов
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## 2. Уведомления
 
-## Further help
+Сетка карточек уведомлений с просмотром ранее созданных и созданием новых (с указанием содержания и срока выполнения).
+Выполненные уведомления можно пометить чекбоксом. 
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## 3. Заметки
+Таблица заметок с функционалом добавления, просмотра, редактирования и удаления заметок. 
+Переход на заметку осуществляется по двойному клику строки.
+Редактирование и удаление доступны по кнопкам столбца "действия".
+Создание - отдельная кнопка слева над таблицей.
+
+# Навигация
+Навигация по модулям осуществляется при помощи tab-панели под header'ом.
+
+
