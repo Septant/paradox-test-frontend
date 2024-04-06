@@ -1,0 +1,22 @@
+<div class="filters">
+  <span>Сортировка</span>
+  <button tuiButton [size]="'xs'" (click)="sortById()">По порядку</button>
+  <button tuiButton [size]="'xs'" (click)="sortByDate()">По дате</button>
+  <button tuiButton [size]="'xs'" (click)="sortByReady()">По готовности</button>
+</div>
+
+<tui-scrollbar>
+  <div class="notifications-container">
+
+    <ng-container *ngIf="notificationsManager.notifications$.value.length">
+      <ng-container *ngFor="let notification of notifications$ | async">
+        <notification-card [notification]="notification" class="card"></notification-card>
+      </ng-container>
+    </ng-container>
+
+    <button class="create-notification card" *ngIf="!isCreating" (click)="createNotification()"><span>+</span></button>
+
+    <notification-create class="card" *ngIf="isCreating" (created)="drawBack($event)"></notification-create>
+
+  </div>
+</tui-scrollbar>

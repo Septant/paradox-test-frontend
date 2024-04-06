@@ -1,0 +1,66 @@
+@import '../../../../../node_modules/@taiga-ui/core/styles/taiga-ui-local.less';
+
+.back {
+  align-self: flex-start;
+}
+
+.notes-container {
+  padding: 3rem;
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+
+}
+
+.tags-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.tag {
+  .gradient(rgb(9, 204, 123), rgb(9, 204, 123), 60deg);
+}
+
+.note-body {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+
+.note-text {
+  width: 70%;
+  max-height: 25rem;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.text-container {
+  color: black;
+  word-wrap: break-word;
+  max-height: 10%;
+  padding: 0.8rem;
+  font-size: 16px;
+}
+
+tui-scrollbar {
+  --tui-text-01: black;
+  height: 25rem;
+  width: 100%;
+  border: 1px solid silver;
+  border-radius: 5px;
+}
+
+.note-time {
+  justify-self: center;
+  width: 30%;
+
+  span {
+    color: black;
+    font-size: 24px;
+  }
+}
+

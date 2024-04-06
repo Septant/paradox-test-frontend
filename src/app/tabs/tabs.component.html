@@ -1,0 +1,23 @@
+<tui-tabs [(activeItemIndex)]="activeItemIndex" [underline]="true">
+
+  <button class="tab-button" tuiTab (click)="goHome()">
+    Главная
+    <tui-svg src="tuiIconHome"></tui-svg>
+  </button>
+
+  <button tuiTab class="tab-button" (click)="goNotes()">
+    Заметки
+    <tui-svg src="tuiIconPenTool"></tui-svg>
+  </button>
+
+  <button tuiTab class="tab-button" (click)="goNotifications()">
+    Напоминания
+    <tui-svg src="tuiIconAtSign"></tui-svg>
+  </button>
+
+  <button tuiTab class="tab-button" (click)="goTags()">
+    Теги
+    <tui-svg src="tuiIconArrowDownRight"></tui-svg>
+  </button>
+
+</tui-tabs>

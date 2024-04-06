@@ -1,0 +1,19 @@
+<div class="card-top">
+  <h1 class="header">#{{notification.id}}</h1>
+
+  <tui-checkbox-labeled class="checkbox" [formControl]="resolvedControl" [size]="'l'" [readOnly]="notification.isResolved">
+    <span>Выполнено</span>
+  </tui-checkbox-labeled>
+</div>
+
+<div class="card-bottom">
+
+  <tui-scrollbar class="text-container">
+    <p>{{notification.text}}</p>
+  </tui-scrollbar>
+
+  <div class="deadline-expires">
+    <span>Срок выполнения:</span>
+    <span>{{notification.deadline}}</span>
+  </div>
+</div>

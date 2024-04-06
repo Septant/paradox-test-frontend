@@ -1,0 +1,47 @@
+@import '../../../../../node_modules/@taiga-ui/core/styles/taiga-ui-local.less';
+
+.tags-container {
+  padding-top: 1rem;
+  padding-left: 1.5rem;
+  --tui-base-01: #0f2dbb;
+}
+
+.tag {
+  --tui-base-01:  rgb(9, 204, 123);/*linear-gradient(60deg, #2d96ff, #ff5011);*/
+  --tui-text-01: black;
+  .gradient(rgb(9, 204, 123), rgb(9, 204, 123), 60deg);
+
+  color: var(--tui-text-01-night);
+  margin: 0.25rem;
+  cursor: pointer;
+}
+ /*  */
+.tags {
+  padding-top: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tag-add-button {
+  align-self: center;
+  --tui-primary:  rgb(9, 204, 123);
+  --tui-primary-hover:  rgb(9, 204, 123);
+
+  /*  color: var(--tui-text-01-night);*/
+}
+
+.tag-new {
+  --tui-base-01: rgb(9, 204, 123); /*linear-gradient(60deg, #2d96ff, #ff5011);*/
+  overflow: hidden;
+  align-self: center;
+  justify-self: center;
+  --tui-text-01: white;
+  --tui-primary: transparent;
+}
+
+._editing {
+  --tui-base-01: rgb(9, 204, 123);
+  background: var(--tui-base-01);/*linear-gradient(60deg, #2d96ff, #ff5011);*/
+}

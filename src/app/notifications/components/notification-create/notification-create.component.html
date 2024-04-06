@@ -1,0 +1,27 @@
+<tui-loader [showLoader]="loading" [overlay]="true">
+  <form [formGroup]="notificationForm" class="notification-form">
+
+    <ng-container>
+      <div class="top-container">
+        <h1>Напоминание</h1>
+        <tui-svg class="close-button" src="tuiIconXCircle" (click)="declineCreate()"></tui-svg>
+      </div>
+
+      <tui-input formControlName="text" [tuiTextfieldSize]="'m'" [tuiTextfieldIcon]="tuiIconFeather" required="true">
+        Содержание
+        <input tuiTextfield type="text" [placeholder]="'Введите текст'" required="true">
+      </tui-input>
+
+      <div class="bot-container">
+
+        <tui-input-date-time class="datepicker" formControlName="deadline" [tuiTextfieldSize]="'m'"
+                             [min]="[defaultDate, defaultTime]" required="true">
+          Дата окончания
+          <input tuiTextfield required="true">
+        </tui-input-date-time>
+
+        <button class="save-button" tuiButton (click)="confirmCreate()" [size]="'m'">Сохранить</button>
+      </div>
+    </ng-container>
+  </form>
+</tui-loader>

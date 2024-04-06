@@ -1,0 +1,28 @@
+<form class="note-create-container" [formGroup]="noteForm">
+  <button tuiButton class="back" appearance="accent" [size]="'m'" (click)="goBack()">Назад</button>
+  <h1> Создание заметки </h1>
+
+  <div class="note-create-body">
+
+    <div class="note-create-text">
+      <tui-input formControlName="title">Название</tui-input>
+
+      <tui-textarea formControlName="text" class="textfield">Текст заметки</tui-textarea>
+
+    </div>
+
+    <div class="note-create-other">
+      <tui-input-date-time formControlName="notifyTime" [min]="[defaultDate, defaultTime]">Срок выполнения</tui-input-date-time>
+      <div class="tags-container">
+        <button tuiButton (click)="addTags()" class="add-tags-button">Выбрать теги</button>
+        <div class="tags-list">
+          <tui-tag class="tag" *ngFor="let tag of noteForm.controls.tags.value" [value]="tag.value"></tui-tag>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <button tuiButton [size]="'l'" class="note-create-button" (click)="createNote()">Сохранить</button>
+</form>

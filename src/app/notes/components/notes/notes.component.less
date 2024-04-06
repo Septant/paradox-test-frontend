@@ -1,0 +1,49 @@
+@import '../../../../../node_modules/@taiga-ui/core/styles/taiga-ui-local.less';
+
+.notes-container {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+.top-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  span {
+    color: black;
+  }
+}
+
+.create-note-button {
+  width: 10rem;
+  margin-bottom: 1rem;
+}
+
+.table-head {
+  color: #13daae;
+  --tui-text-02: black;
+}
+
+.notes-table {
+  background-color: #d9e9f6;
+}
+
+.action-buttons-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+td {
+  color: black;
+}
+.tag {
+  margin-right: 1rem;
+  .gradient(rgb(9, 204, 123), rgb(9, 204, 123), 60deg);
+}
+
+.edit {
+  --tui-link: rgb(9, 204, 123);
+}

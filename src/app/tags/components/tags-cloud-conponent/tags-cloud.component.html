@@ -1,0 +1,26 @@
+<div class="tags-container">
+  <h1>Облако тегов</h1>
+
+  <div class="tags">
+    <tui-tag *ngFor="let tag of tagsRef$ | async; let index = index"
+             [value]="tag.value"
+             size="l"
+             class="tag"
+             [editable]="!tag.isUsed"
+             [removable]="!tag.isUsed"
+             (edited)="editTag($event, index, tag.id)"
+    >
+
+    </tui-tag>
+
+    <button tuiButton [size]="'s'" [shape]="'square'" class="tag-add-button" (click)="addTag()" *ngIf="!addingNewTag">
+      <tui-svg src="tuiIconPlus"></tui-svg>
+    </button>
+
+    <tui-loader class="tag-new" [showLoader]="loader">
+      <tui-input-tag (tuiClickOutside)="closeAdding()" *ngIf="addingNewTag" [formControl]="tagControl"
+                     [tuiTextfieldSize]="'s'"></tui-input-tag>
+    </tui-loader>
+  </div>
+
+</div>

@@ -1,0 +1,38 @@
+<div class="notes-container">
+
+  <div class="top-container">
+  <button class="create-note-button" tuiButton [size]="'s'" (click)="createNote()">
+    Создать заметку
+  </button>
+    <span> *Для перехода к заметке дважды кликните по её строке в таблице</span>
+  </div>
+  <table tuiTable [columns]="columns" class="notes-table">
+
+    <thead class="table-head">
+    <tr tuiThGroup>
+      <ng-container *ngFor="let column of columns">
+        <th tuiTh [resizable]="true">
+          {{column}}
+        </th>
+      </ng-container>
+    </tr>
+    </thead>
+
+    <tbody tuiTbody *ngIf="notes$ | async as notes" [data]="notes">
+    <tr *ngFor="let note of notes; let index = index" tuiTr (dblclick)="openNote(note.id)">
+      <td *tuiCell="'Название'" tuiTd>{{note.title}}</td>
+      <td *tuiCell="'№'" tuiTd>{{note.id}}</td>
+      <td *tuiCell="'Дата напоминания'" tuiTd>{{note.notifyTime}}</td>
+      <td *tuiCell="'Теги'" tuiTd >
+        <tui-tag *ngFor="let tag of note.tags" [value]="tag.value" class="tag"></tui-tag>
+      </td>
+      <td *tuiCell="'Действия'" tuiTd class="action-buttons-row">
+        <button icon="tuiIconEdit" appearance="secondary" tuiIconButton  size="xs" class="action-button edit" (click)="redactNote(note.id)"></button>
+        <button icon="tuiIconTrash2" tuiIconButton appearance="secondary"  size="xs" class="action-button delete" (click)="deleteNote(note.id, index)"></button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+
+</div>
+

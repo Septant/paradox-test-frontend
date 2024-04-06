@@ -1,0 +1,25 @@
+@import '../../../../../node_modules/@taiga-ui/core/styles/taiga-ui-local.less';
+.tag {
+  --tui-base-01:  rgb(9, 204, 123);
+  --tui-text-01: black;
+
+  color: var(--tui-text-01-night);
+  margin: 0.25rem;
+  cursor: pointer;
+}
+
+.selected {
+  .gradient(rgb(9, 204, 123), rgb(9, 204, 123), 60deg);
+}
+
+.save-button {
+  width: 50%;
+  align-self: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 1rem;
+}

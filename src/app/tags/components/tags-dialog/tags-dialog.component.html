@@ -1,0 +1,17 @@
+<div class="container">
+
+  <div class="tags">
+    <tui-tag *ngFor="let tag of tags$ | async; let index = index"
+             [value]="tag.value"
+             size="l"
+             [ngClass]="{'selected': isTagSelected(tag)}"
+             class="tag"
+             (click)="selectTag(tag)"
+    >
+
+    </tui-tag>
+  </div>
+
+  <button tuiButton (click)="addSelected()" class="save-button">Сохранить</button>
+
+</div>

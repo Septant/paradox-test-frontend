@@ -1,0 +1,32 @@
+<div class="notes-container">
+
+  <button tuiButton appearance="accent" class="back" size="m" (click)="goBack()">Назад</button>
+
+  <ng-container *ngIf="note$ | async as note">
+    <div class="tags-list">
+      <tui-tag class="tag" *ngFor="let tag of note.tags" [value]="tag.value"></tui-tag>
+    </div>
+
+    <div class="note-body">
+
+      <div class="note-text">
+
+        <h1>{{note.title}}</h1>
+        <tui-scrollbar>
+          <p class="text-container">&nbsp;&nbsp;&nbsp;&nbsp;{{note.text}}</p>
+        </tui-scrollbar>
+
+      </div>
+
+      <div class="note-time">
+        <h1> Дата напоминания </h1>
+        <span>{{note.notifyTime}}</span>
+      </div>
+
+
+    </div>
+
+
+  </ng-container>
+
+</div>
