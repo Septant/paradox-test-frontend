@@ -9,12 +9,11 @@ Node version 18.10.0
 
 ### Development server
 
-`ng serve`: Запуск в режиме разработчика. Рабочий порт: `http://localhost:4200/`.
+`ng serve`: Запуск в режиме разработчика. Рабочий порт: `http://localhost:4200/`. 
 
 ### Build
 
 `ng build`: Сборка проекта. Артефакты собираются в папке `dist/`. Содержимое папки dist/frontend необходимо скопировать в `dist` backend под именем `client` после сборки backend-проекта.
-
 
 # Модули
 
@@ -36,4 +35,15 @@ Node version 18.10.0
 # Навигация
 Навигация по модулям осуществляется при помощи tab-панели под header'ом.
 
+
+## файловая структура (внутри src/app):
+1. [api-services](/src/app/api-services): абстракции над HttpClient и конечные endpoint'ы, перехватчики
+2. [outer-wrap](/src/app/outer-wrap): footer и header 
+3. [models](/src/app/models): интерфейсы
+4. Модули:
+   * [tabs](/src/app/tabs): tab-панель навигации
+   * [notes](/src/app/notes): модуль заметок
+   * [notifications](/src/app/notifications): модуль уведомлений
+   * [tags](/src/app/tags): модуль тегов
+5. app.* - корень приложения
 
