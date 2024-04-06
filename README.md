@@ -1,6 +1,6 @@
 # Frontend
 
-Тестовое задание для Парадох
+Тестовое задание для Парадокс
 Версия Angular: [Angular CLI](https://github.com/angular/angular-cli) version 16.2.10.
 
 ### Сторонние ресурсы
