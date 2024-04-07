@@ -4,12 +4,12 @@
 
 # Frontend
 
-Тестовое задание для Парадокс <br>
-Node version 18.10.0 <br>
+Тестовое задание для Парадокс. <br>
+Node version 18.10.0. <br>
 Версия Angular: [Angular CLI](https://github.com/angular/angular-cli) version 16.2.10.
 
 ### Сторонние ресурсы
-В проекте используются [moment.js](https://momentjs.com/) и [Taiga-ui](https://taiga-ui.dev)
+В проекте используются [moment.js](https://momentjs.com/) и [Taiga-ui](https://taiga-ui.dev).
 
 ### Режим разработки
 
@@ -41,14 +41,14 @@ Node version 18.10.0 <br>
 Создание - отдельная кнопка слева над таблицей. <br>
 
 # Структура:
-1. [api-services](/src/app/api-services): абстракции над HttpClient и конечные endpoint'ы, перехватчики
-2. [outer-wrap](/src/app/outer-wrap): footer и header 
-3. [models](/src/app/models): интерфейсы
+1. [api-services](/src/app/api-services): абстракции над HttpClient и конечные endpoint'ы, перехватчики;
+2. [outer-wrap](/src/app/outer-wrap): footer и header ;
+3. [models](/src/app/models): интерфейсы;
 4. Модули:
-   * [tabs](/src/app/tabs): tab-панель навигации по модулям приложения
-   * [notes](/src/app/notes): модуль заметок
-   * [notifications](/src/app/notifications): модуль уведомлений
-   * [tags](/src/app/tags): модуль тегов
-5. app.* - корень приложения
+   * [tabs](/src/app/tabs): tab-панель навигации по модулям приложения;
+   * [notes](/src/app/notes): модуль заметок;
+   * [notifications](/src/app/notifications): модуль уведомлений;
+   * [tags](/src/app/tags): модуль тегов;
+5. app.* - корень приложения;
 
 
