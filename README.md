@@ -7,11 +7,11 @@ Node version 18.10.0
 ### Сторонние ресурсы
 В проекте используются [moment.js](https://momentjs.com/) и [Taiga-ui](https://taiga-ui.dev)
 
-### Development server
+### Режим разработки
 
 `ng serve`: Запуск в режиме разработчика. Рабочий порт: `http://localhost:4200/`. 
 
-### Build
+### Сборка 
 
 `ng build`: Сборка проекта. Артефакты собираются в папке `dist/`. Содержимое папки dist/frontend необходимо скопировать в `dist` backend под именем `client` после сборки backend-проекта.
 
