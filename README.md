@@ -1,3 +1,7 @@
+<p align="center">
+  <a href="https://angular.io" target="blank"> <img src="https://angular.io/assets/images/logos/angular/angular.svg" width="200" alt="Angular logo"> </a>
+</p>
+
 # Frontend
 
 Тестовое задание для Парадокс <br>
