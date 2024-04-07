@@ -40,7 +40,7 @@ Node version 18.10.0 <br>
 Навигация по модулям осуществляется при помощи tab-панели под header'ом.
 
 
-## файловая структура (внутри src/app):
+# Структура:
 1. [api-services](/src/app/api-services): абстракции над HttpClient и конечные endpoint'ы, перехватчики
 2. [outer-wrap](/src/app/outer-wrap): footer и header 
 3. [models](/src/app/models): интерфейсы
